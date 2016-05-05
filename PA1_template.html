@@ -144,10 +144,7 @@ $(document).ready(function () {
 <div id="loading-and-preprocessing-the-data" class="section level1">
 <h1>Loading and preprocessing the data</h1>
 <p>Load the data and perform pre-processing in order to remove NA values. Also reformat the date data.</p>
-<pre class="r"><code>###TAKE THIS PATH OUT###
-
-setwd(&quot;C:/Users/genel/Documents/Coursera/ReproducibleResearch/Project1&quot;)
-activity &lt;- read.csv(&quot;activity.csv&quot;)
+<pre class="r"><code>activity &lt;- read.csv(&quot;activity.csv&quot;)
 activity$day &lt;- weekdays(as.Date(activity$date))
 activity$DateTime&lt;- as.POSIXct(activity$date, format=&quot;%Y-%m-%d&quot;)
 clean &lt;- activity[!is.na(activity$steps),]</code></pre>
